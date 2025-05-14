@@ -8,8 +8,10 @@ fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
 
     // TODO: Fix the compiler error by adding something to this match statement.
+    // we can also put & here to use a reference in the switch
     match optional_point {
-        Some(p) => println!("Co-ordinates are {},{}", p.x, p.y),
+        // using ref here is valid, but & is not, bit confusing?
+        Some(ref p) => println!("Co-ordinates are {},{}", p.x, p.y),
         _ => panic!("No match!"),
     }
 
