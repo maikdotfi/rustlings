@@ -6,7 +6,9 @@ fn main() {
     // TODO: Fix the compiler error by annotating the type of the vector
     // `Vec<T>`. Choose `T` as some integer type that can be created from
     // `u8` and `i8`.
-    let mut numbers = Vec::new();
+    // This can be solved with two different syntaxes
+    // let mut numbers = Vec::<i32>::new();
+    let mut numbers: Vec<i32> = Vec::new();
 
     // Don't change the lines below.
     let n1: u8 = 42;
